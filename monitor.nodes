@@ -1,0 +1,1991 @@
+[
+    {
+        "id": "87555f5c.75aab",
+        "type": "tab",
+        "label": "Vital Sign Monitoring",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "f62e9f27.ad0498",
+        "type": "tab",
+        "label": "On-Board Information Monitoring",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "74538fbd.e0fa48",
+        "type": "subflow",
+        "name": "Encryption",
+        "info": "",
+        "in": [
+            {
+                "x": 300,
+                "y": 200,
+                "wires": [
+                    {
+                        "id": "eeccd0d.c8588b"
+                    }
+                ]
+            }
+        ],
+        "out": [
+            {
+                "x": 1016.6665954589844,
+                "y": 269.99998474121094,
+                "wires": [
+                    {
+                        "id": "254f26eb.0177aa",
+                        "port": 0
+                    }
+                ]
+            },
+            {
+                "x": 603.3332824707031,
+                "y": 161.66665649414062,
+                "wires": [
+                    {
+                        "id": "eeccd0d.c8588b",
+                        "port": 0
+                    }
+                ]
+            }
+        ],
+        "inputLabels": [
+            "Plain Text Input"
+        ],
+        "outputLabels": [
+            "Encrypted Output",
+            "Plain Text Output"
+        ]
+    },
+    {
+        "id": "6b6fac60.2795ec",
+        "type": "subflow",
+        "name": "Decryption",
+        "info": "",
+        "in": [
+            {
+                "x": 346.6666259765625,
+                "y": 190.00001525878906,
+                "wires": [
+                    {
+                        "id": "26d19177.7413be"
+                    }
+                ]
+            }
+        ],
+        "out": [
+            {
+                "x": 1101.6666259765625,
+                "y": 189.99998474121094,
+                "wires": [
+                    {
+                        "id": "55dd83be.e0ec94",
+                        "port": 0
+                    }
+                ]
+            }
+        ],
+        "inputLabels": [
+            "Encrypted Input"
+        ],
+        "outputLabels": [
+            "Decrypted Output"
+        ]
+    },
+    {
+        "id": "5c017698.f0ea68",
+        "type": "subflow",
+        "name": "Battery Status",
+        "info": "",
+        "in": [],
+        "out": []
+    },
+    {
+        "id": "9fc52e91.fa0d48",
+        "type": "ui_group",
+        "z": "",
+        "name": "Battery Status",
+        "tab": "",
+        "disp": true,
+        "width": "6"
+    },
+    {
+        "id": "56d6836f.a66e0c",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-custom",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#ffffff",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#6f6f6f",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "reset": false
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#4B7930",
+                    "value": "#4B7930",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#6f6f6f",
+                    "edited": true
+                },
+                "page-backgroundColor": {
+                    "value": "#e3ddd2",
+                    "edited": true
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#6f6f6f",
+                    "edited": true
+                },
+                "group-textColor": {
+                    "value": "#ffffff",
+                    "edited": true
+                },
+                "group-borderColor": {
+                    "value": "#555555",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#333333",
+                    "edited": true
+                },
+                "widget-textColor": {
+                    "value": "#eeeeee",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#6f6f6f",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            }
+        },
+        "site": {
+            "name": "SECOR Use case",
+            "hideToolbar": "false",
+            "allowSwipe": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "772d9ae7.6c6a4c",
+        "type": "ui_group",
+        "z": "",
+        "name": "Encryption",
+        "tab": "",
+        "order": 1,
+        "disp": true,
+        "width": "6"
+    },
+    {
+        "id": "6ec881d7.ad8988",
+        "type": "ui_group",
+        "z": "",
+        "name": "Encryption New",
+        "tab": "",
+        "order": 2,
+        "disp": true,
+        "width": "6"
+    },
+    {
+        "id": "d9129a41.4ef338",
+        "type": "ui_tab",
+        "z": "",
+        "name": "Heartbeat",
+        "icon": "dashboard",
+        "order": 3
+    },
+    {
+        "id": "f12ae0dc.557e",
+        "type": "ui_group",
+        "z": "",
+        "name": "Heartbeat Control",
+        "tab": "d9129a41.4ef338",
+        "order": 1,
+        "disp": true,
+        "width": "6"
+    },
+    {
+        "id": "801c38a4.8aec8",
+        "type": "ui_group",
+        "z": "",
+        "name": "Heartbeat Monitor",
+        "tab": "d9129a41.4ef338",
+        "order": 2,
+        "disp": true,
+        "width": "6"
+    },
+    {
+        "id": "589b04f8.3a6ef4",
+        "type": "ui_group",
+        "z": "",
+        "name": "Heartbeat Information",
+        "tab": "d9129a41.4ef338",
+        "order": 3,
+        "disp": true,
+        "width": "6"
+    },
+    {
+        "id": "63ccad57.c1a0ac",
+        "type": "ui_group",
+        "z": "",
+        "name": "Skin Temperature Control",
+        "tab": "31c0ee37.d37cea",
+        "order": 1,
+        "disp": true,
+        "width": "6"
+    },
+    {
+        "id": "92bf8a4e.5bcfe",
+        "type": "ui_group",
+        "z": "",
+        "name": "Skin Temperature Monitor",
+        "tab": "31c0ee37.d37cea",
+        "order": 2,
+        "disp": true,
+        "width": "6"
+    },
+    {
+        "id": "a1b7df5e.92e788",
+        "type": "ui_group",
+        "z": "",
+        "name": "Skin Temperature Information",
+        "tab": "31c0ee37.d37cea",
+        "order": 3,
+        "disp": true,
+        "width": "7"
+    },
+    {
+        "id": "31c0ee37.d37cea",
+        "type": "ui_tab",
+        "z": "",
+        "name": "Skin Temperature",
+        "icon": "dashboard",
+        "order": 2
+    },
+    {
+        "id": "316e9909.7f10ae",
+        "type": "ui_tab",
+        "z": "",
+        "name": "Respiration",
+        "icon": "dashboard",
+        "order": 3
+    },
+    {
+        "id": "c37feeb5.9ad7b",
+        "type": "ui_group",
+        "z": "",
+        "name": "Respiration Control",
+        "tab": "316e9909.7f10ae",
+        "order": 1,
+        "disp": true,
+        "width": "6"
+    },
+    {
+        "id": "4b4c1d51.691b84",
+        "type": "ui_group",
+        "z": "",
+        "name": "Respiration Monitor",
+        "tab": "316e9909.7f10ae",
+        "order": 2,
+        "disp": true,
+        "width": "6"
+    },
+    {
+        "id": "b5e7b362.4d8bb",
+        "type": "ui_group",
+        "z": "",
+        "name": "Respiration Information",
+        "tab": "316e9909.7f10ae",
+        "order": 3,
+        "disp": true,
+        "width": "6"
+    },
+    {
+        "id": "f4de6d51.e187c",
+        "type": "ui_group",
+        "z": "",
+        "name": "VS-Temperature Control",
+        "tab": "",
+        "order": 1,
+        "disp": true,
+        "width": "6"
+    },
+    {
+        "id": "35dc0fa3.19b9e",
+        "type": "ui_group",
+        "z": "",
+        "name": "VS-Heartbeat Control",
+        "tab": "",
+        "order": 2,
+        "disp": true,
+        "width": "6"
+    },
+    {
+        "id": "697e04b9.2ca9fc",
+        "type": "ui_group",
+        "z": "",
+        "name": "VS-Respiration Control",
+        "tab": "",
+        "order": 3,
+        "disp": true,
+        "width": "6"
+    },
+    {
+        "id": "deb8423.e57124",
+        "type": "ui_group",
+        "z": "",
+        "name": "VS-Monitor",
+        "tab": "",
+        "order": 4,
+        "disp": true,
+        "width": "6"
+    },
+    {
+        "id": "89e183b8.e5fa8",
+        "type": "ui_group",
+        "z": "",
+        "name": "VS-Information",
+        "tab": "",
+        "order": 5,
+        "disp": true,
+        "width": "6"
+    },
+    {
+        "id": "fef9c846.d0caa",
+        "type": "ui_tab",
+        "z": "",
+        "name": "Vital Signs",
+        "icon": "fa-bookmark ",
+        "order": 4
+    },
+    {
+        "id": "c8673714.ba0248",
+        "type": "ui_group",
+        "z": "",
+        "name": "VS-Controls",
+        "tab": "fef9c846.d0caa",
+        "order": 1,
+        "disp": false,
+        "width": "6"
+    },
+    {
+        "id": "cd9414a3.e7b96",
+        "type": "ui_group",
+        "z": "",
+        "name": "VS-Monitoring",
+        "tab": "fef9c846.d0caa",
+        "order": 2,
+        "disp": false,
+        "width": "15"
+    },
+    {
+        "id": "3f08adad.913ada",
+        "type": "ui_group",
+        "z": "",
+        "name": "VS-Information",
+        "tab": "fef9c846.d0caa",
+        "order": 3,
+        "disp": false,
+        "width": "7"
+    },
+    {
+        "id": "74244a80.4454c4",
+        "type": "ui_tab",
+        "z": "",
+        "name": "Vehicle Monitor",
+        "icon": "fa-bookmark ",
+        "order": 5
+    },
+    {
+        "id": "79ab2a37.99866c",
+        "type": "ui_group",
+        "z": "",
+        "name": "Static Information",
+        "tab": "74244a80.4454c4",
+        "order": 1,
+        "disp": false,
+        "width": "6"
+    },
+    {
+        "id": "4f42cd73.d6c3ec",
+        "type": "ui_group",
+        "z": "",
+        "name": "Rotation-rate Sensor",
+        "tab": "74244a80.4454c4",
+        "order": 2,
+        "disp": true,
+        "width": "6"
+    },
+    {
+        "id": "df26be4d.514a58",
+        "type": "ui_group",
+        "z": "",
+        "name": "Acceleration Sensor",
+        "tab": "74244a80.4454c4",
+        "order": 3,
+        "disp": true,
+        "width": "6"
+    },
+    {
+        "id": "3db9a2d2.2a03e6",
+        "type": "ui_group",
+        "z": "",
+        "name": "Proximity Sensor",
+        "tab": "74244a80.4454c4",
+        "order": 4,
+        "disp": true,
+        "width": "6"
+    },
+    {
+        "id": "eeccd0d.c8588b",
+        "type": "function",
+        "z": "74538fbd.e0fa48",
+        "name": "",
+        "func": "flow.set(\"input\", msg.payload);",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 450,
+        "y": 200,
+        "wires": [
+            [
+                "7d8b915c.42ea98"
+            ]
+        ]
+    },
+    {
+        "id": "254f26eb.0177aa",
+        "type": "encryptor",
+        "z": "74538fbd.e0fa48",
+        "name": "",
+        "cryptoPassword": "",
+        "x": 843.3333129882812,
+        "y": 266.6666717529297,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "7d8b915c.42ea98",
+        "type": "ui_button",
+        "z": "74538fbd.e0fa48",
+        "name": "",
+        "group": "6ec881d7.ad8988",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Encrypted",
+        "color": "",
+        "bgcolor": "",
+        "icon": "",
+        "payload": "input",
+        "payloadType": "flow",
+        "topic": "",
+        "x": 653.3333129882812,
+        "y": 266.6666717529297,
+        "wires": [
+            [
+                "254f26eb.0177aa"
+            ]
+        ]
+    },
+    {
+        "id": "26d19177.7413be",
+        "type": "function",
+        "z": "6b6fac60.2795ec",
+        "name": "",
+        "func": "flow.set(\"input\", msg.payload);",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 519.9998779296875,
+        "y": 189.99998474121094,
+        "wires": [
+            [
+                "e28e7fd6.bf33e"
+            ]
+        ]
+    },
+    {
+        "id": "55dd83be.e0ec94",
+        "type": "decryptor",
+        "z": "6b6fac60.2795ec",
+        "name": "",
+        "cryptoPassword": "",
+        "x": 898.333251953125,
+        "y": 189.99998474121094,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "e28e7fd6.bf33e",
+        "type": "ui_button",
+        "z": "6b6fac60.2795ec",
+        "name": "",
+        "group": "6ec881d7.ad8988",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Decrypted",
+        "color": "",
+        "bgcolor": "",
+        "icon": "",
+        "payload": "input",
+        "payloadType": "flow",
+        "topic": "",
+        "x": 708.333251953125,
+        "y": 189.99998474121094,
+        "wires": [
+            [
+                "55dd83be.e0ec94"
+            ]
+        ]
+    },
+    {
+        "id": "b9a1ad26.aa6418",
+        "type": "exec",
+        "z": "5c017698.f0ea68",
+        "command": "cat /sys/class/power_supply/BAT0/capacity",
+        "addpay": false,
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "oldrc": false,
+        "name": "bat",
+        "x": 590,
+        "y": 220,
+        "wires": [
+            [
+                "bf2bc2d1.1d9f1",
+                "c8fa323a.07d4"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "b9655bc.9b0cb28",
+        "type": "inject",
+        "z": "5c017698.f0ea68",
+        "name": "",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "repeat": "5",
+        "crontab": "",
+        "once": false,
+        "x": 309.99999999999994,
+        "y": 264.99999999999994,
+        "wires": [
+            [
+                "7f0cf137.df877",
+                "b9a1ad26.aa6418"
+            ]
+        ]
+    },
+    {
+        "id": "bf2bc2d1.1d9f1",
+        "type": "ui_gauge",
+        "z": "5c017698.f0ea68",
+        "name": "bat_meter",
+        "group": "9fc52e91.fa0d48",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Battery Level",
+        "label": "%",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#ff5946",
+            "#fffd46",
+            "#84ff46"
+        ],
+        "seg1": "20",
+        "seg2": "65",
+        "x": 810,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "d5ca17bf.a92b1",
+        "type": "ui_text",
+        "z": "5c017698.f0ea68",
+        "group": "9fc52e91.fa0d48",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Status:",
+        "format": "{{msg.payload}}",
+        "layout": "row-left",
+        "x": 800,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "7f0cf137.df877",
+        "type": "exec",
+        "z": "5c017698.f0ea68",
+        "command": "cat /sys/class/power_supply/BAT0/status",
+        "addpay": false,
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "oldrc": false,
+        "name": "bat_status",
+        "x": 610,
+        "y": 320,
+        "wires": [
+            [
+                "d5ca17bf.a92b1"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "c8fa323a.07d4",
+        "type": "ui_chart",
+        "z": "5c017698.f0ea68",
+        "name": "",
+        "group": "9fc52e91.fa0d48",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "label": "",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "bezier",
+        "nodata": "",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "100",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "86400",
+        "cutout": 0,
+        "useOneColor": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "x": 790,
+        "y": 240,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "f2f3ba77.34c6",
+        "type": "ui_dropdown",
+        "z": "87555f5c.75aab",
+        "name": "",
+        "label": "Skin Temperature:",
+        "place": "",
+        "group": "c8673714.ba0248",
+        "order": 1,
+        "width": "0",
+        "height": "0",
+        "passthru": true,
+        "options": [
+            {
+                "label": "Rigid muscles, Lethal Condition",
+                "value": "skintemp-4",
+                "type": "str"
+            },
+            {
+                "label": "Possibly coma, Poor reflexes",
+                "value": "skintemp-3",
+                "type": "str"
+            },
+            {
+                "label": "Stupor, Dozy, Unable to walk",
+                "value": "skintemp-2",
+                "type": "str"
+            },
+            {
+                "label": "Shivering",
+                "value": "skintemp-1",
+                "type": "str"
+            },
+            {
+                "label": "Healthy condition",
+                "value": "skintemp=0",
+                "type": "str"
+            },
+            {
+                "label": "Fevery",
+                "value": "skintemp+1",
+                "type": "str"
+            },
+            {
+                "label": "Lethal condition",
+                "value": "skintemp+2",
+                "type": "str"
+            }
+        ],
+        "payload": "",
+        "topic": "",
+        "x": 370,
+        "y": 160,
+        "wires": [
+            [
+                "b1a49ecf.5fa978"
+            ]
+        ]
+    },
+    {
+        "id": "b1a49ecf.5fa978",
+        "type": "function",
+        "z": "87555f5c.75aab",
+        "name": "SK-type",
+        "func": "global.set(\"skintemp\",msg.payload);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 580,
+        "y": 160,
+        "wires": [
+            [
+                "e10a9c89.8582a"
+            ]
+        ]
+    },
+    {
+        "id": "30cd9705.cb6ad8",
+        "type": "ui_dropdown",
+        "z": "87555f5c.75aab",
+        "name": "",
+        "label": "Heartrate:    ",
+        "place": "",
+        "group": "c8673714.ba0248",
+        "order": 3,
+        "width": "0",
+        "height": "0",
+        "passthru": true,
+        "options": [
+            {
+                "label": "Hypothermic",
+                "value": "hr-2",
+                "type": "str"
+            },
+            {
+                "label": "Low repulse",
+                "value": "hr-1",
+                "type": "str"
+            },
+            {
+                "label": "Healthy condition",
+                "value": "hr=0",
+                "type": "str"
+            },
+            {
+                "label": "Anxiety, Fear, Fever",
+                "value": "hr+1",
+                "type": "str"
+            },
+            {
+                "label": "Haevy heart racing",
+                "value": "hr+2",
+                "type": "str"
+            },
+            {
+                "label": "Lethal condition",
+                "value": "hr+3",
+                "type": "str"
+            }
+        ],
+        "payload": "",
+        "topic": "",
+        "x": 350,
+        "y": 220,
+        "wires": [
+            [
+                "7b60333.1cf6bcc"
+            ]
+        ]
+    },
+    {
+        "id": "7b60333.1cf6bcc",
+        "type": "function",
+        "z": "87555f5c.75aab",
+        "name": "HR-type",
+        "func": "global.set(\"hr\",msg.payload);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 580,
+        "y": 220,
+        "wires": [
+            [
+                "13d5ac78.b2f0a4"
+            ]
+        ]
+    },
+    {
+        "id": "9b7d337c.d0f258",
+        "type": "ui_dropdown",
+        "z": "87555f5c.75aab",
+        "name": "",
+        "label": "Respiration:",
+        "place": "",
+        "group": "c8673714.ba0248",
+        "order": 5,
+        "width": "0",
+        "height": "0",
+        "passthru": true,
+        "options": [
+            {
+                "label": "Non-existent",
+                "value": "respiration-2",
+                "type": "str"
+            },
+            {
+                "label": "Abnormally slow",
+                "value": "respiration-1",
+                "type": "str"
+            },
+            {
+                "label": "Healthy condition",
+                "value": "respiration=0",
+                "type": "str"
+            },
+            {
+                "label": "Abnormally fast",
+                "value": "respiration+1",
+                "type": "str"
+            }
+        ],
+        "payload": "",
+        "topic": "",
+        "x": 350,
+        "y": 280,
+        "wires": [
+            [
+                "5520589a.9bb1d"
+            ]
+        ]
+    },
+    {
+        "id": "5520589a.9bb1d",
+        "type": "function",
+        "z": "87555f5c.75aab",
+        "name": "RES-type",
+        "func": "global.set(\"respiration\",msg.payload);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 580,
+        "y": 280,
+        "wires": [
+            [
+                "3bccec03.b53afc"
+            ]
+        ]
+    },
+    {
+        "id": "e10a9c89.8582a",
+        "type": "function",
+        "z": "87555f5c.75aab",
+        "name": "Skin Temperature",
+        "func": "var temp = {};\n\nfunction temperature(type) {\n    switch(type) {\n        case 'skintemp-4':\n            // 15 to 19\n            current_skintemp = Math.floor(Math.random() * (19 - 15) + 15);\n            break;\n        case 'skintemp-3':\n            // 19 to 27\n            current_skintemp = Math.floor(Math.random() * (27 - 19) + 19);\n            break;\n        case 'skintemp-2':\n            // 27 to 30\n            current_skintemp = Math.floor(Math.random() * (30 - 27) + 27);\n            break;\n        case 'skintemp-1':\n            // 30 to 32\n            current_skintemp = Math.floor(Math.random() * (32 - 30) + 30);\n            break;\n        case 'skintemp=0':\n            // 32 to 34\n            current_skintemp = Math.floor(Math.random() * (34 - 32) + 33);\n            break;\n        case 'skintemp+1':\n            // 34 to 36\n            current_skintemp = Math.floor(Math.random() * (36 - 34) + 34);\n            break;\n        case 'skintemp+2':\n            // 36 to 43\n            current_skintemp = Math.floor(Math.random() * (43 - 36) + 36);\n            break;\n        default:\n            // Static default value\n            current_skintemp = 34;\n    }\n    \n    return current_skintemp;\n}\n\ntemp.payload = temperature(global.get(\"skintemp\"));\ntemp.topic = 'Skin temperature';\n\nreturn temp;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 790,
+        "y": 160,
+        "wires": [
+            [
+                "1cc4b5ad.73630a",
+                "d3d5bdd6.cede8"
+            ]
+        ]
+    },
+    {
+        "id": "fa1b5677.f14a78",
+        "type": "inject",
+        "z": "87555f5c.75aab",
+        "name": "clock",
+        "topic": "",
+        "payload": "ts",
+        "payloadType": "flow",
+        "repeat": "1",
+        "crontab": "",
+        "once": false,
+        "x": 570,
+        "y": 60,
+        "wires": [
+            [
+                "e10a9c89.8582a",
+                "13d5ac78.b2f0a4",
+                "3bccec03.b53afc"
+            ]
+        ]
+    },
+    {
+        "id": "13d5ac78.b2f0a4",
+        "type": "function",
+        "z": "87555f5c.75aab",
+        "name": "Heartbeat",
+        "func": "var hr = {};\n\nfunction heartbeat(type) {\n    switch(type) {\n        case \"hr-2\":\n            // 20 to 40 (very low heart rate)\n            current_hr = Math.floor(Math.random() * (40 - 20) + 20);\n            break;\n        case 'hr-1':\n            // 40 to 60 (low heart rate)\n            current_hr = Math.floor(Math.random() * (60 - 40) + 40);\n            break;\n        case 'hr=0':\n            // 60 to 100 (normal heart rate)\n            current_hr = Math.floor(Math.random() * (100 - 60) + 60);\n            break;\n        case 'hr+1':\n            // 100 to 150 (high heart rate)\n            current_hr = Math.floor(Math.random() * (150 - 100) + 100);\n            break;\n        case 'hr+2':\n            // 150 to 200 (critical heart rate)\n            current_hr = Math.floor(Math.random() * (200 - 150) + 150);\n            break;\n        case 'hr+3':\n            // 200 to 300 (catastrophic heart rate)\n            current_hr = Math.floor(Math.random() * (300 - 200) + 200);\n            break;\n        default:\n            // Static default value\n            current_hr = 70;\n    } \n    \n    return current_hr;\n}\nhr.payload = heartbeat(global.get(\"hr\"));\nhr.topic = 'Heartbeat';\nreturn hr;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 760,
+        "y": 220,
+        "wires": [
+            [
+                "ad0272f.9c3d01",
+                "2d2a6d74.1643c2"
+            ]
+        ]
+    },
+    {
+        "id": "3bccec03.b53afc",
+        "type": "function",
+        "z": "87555f5c.75aab",
+        "name": "Respiration",
+        "func": "var resp = {};\n\nfunction respiration(type) {\n    switch(type) {\n        case 'respiration-2':\n            // 0\n            current_respiration = 0;\n            break;\n        case 'respiration-1':\n            // 5 to 10\n            current_respiration = Math.floor(Math.random() * (10 - 5) + 5);\n            break;\n        case 'respiration=0':\n            // 12 to 18\n            current_respiration = Math.floor(Math.random() * (18 - 12) + 12);\n            break;\n        case 'respiration+1':\n            // 20 to 30\n            current_respiration = Math.floor(Math.random() * (30 - 20) + 20);\n            break;\n        default:\n            // Static default value\n            current_respiration = 15;\n    } \n    \n    return current_respiration;\n}\nresp.payload = respiration(global.get(\"respiration\"));\nresp.topic = 'Respiration'\nreturn resp;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 770,
+        "y": 280,
+        "wires": [
+            [
+                "1cde41bc.588746",
+                "d12837bf.3139d8"
+            ]
+        ]
+    },
+    {
+        "id": "1cc4b5ad.73630a",
+        "type": "ui_chart",
+        "z": "87555f5c.75aab",
+        "name": "",
+        "group": "cd9414a3.e7b96",
+        "order": 0,
+        "width": "5",
+        "height": "6",
+        "label": "Skin Temperature Monitor",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "15",
+        "ymax": "43",
+        "removeOlder": "10",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "1",
+        "cutout": 0,
+        "useOneColor": false,
+        "colors": [
+            "#ffec7d",
+            "#ff927d",
+            "#d77dff",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "x": 1160,
+        "y": 100,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "ad0272f.9c3d01",
+        "type": "ui_chart",
+        "z": "87555f5c.75aab",
+        "name": "",
+        "group": "cd9414a3.e7b96",
+        "order": 0,
+        "width": "5",
+        "height": "6",
+        "label": "Heartrate Monitor",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "20",
+        "ymax": "300",
+        "removeOlder": "10",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "1",
+        "cutout": 0,
+        "useOneColor": false,
+        "colors": [
+            "#ff927d",
+            "#ff927d",
+            "#d77dff",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "x": 1130,
+        "y": 200,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "1cde41bc.588746",
+        "type": "ui_chart",
+        "z": "87555f5c.75aab",
+        "name": "",
+        "group": "cd9414a3.e7b96",
+        "order": 0,
+        "width": "5",
+        "height": "6",
+        "label": "Respiration Monitor",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "30",
+        "removeOlder": "10",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "1",
+        "cutout": 0,
+        "useOneColor": false,
+        "colors": [
+            "#d77dff",
+            "#ff927d",
+            "#d77dff",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "x": 1140,
+        "y": 300,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "d3d5bdd6.cede8",
+        "type": "ui_text",
+        "z": "87555f5c.75aab",
+        "group": "c8673714.ba0248",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Current Value:",
+        "format": "{{msg.payload}} °C",
+        "layout": "row-left",
+        "x": 1120,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "d12837bf.3139d8",
+        "type": "ui_text",
+        "z": "87555f5c.75aab",
+        "group": "c8673714.ba0248",
+        "order": 6,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Current Value:",
+        "format": "{{msg.payload}} breaths/min",
+        "layout": "row-left",
+        "x": 1120,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "2d2a6d74.1643c2",
+        "type": "ui_text",
+        "z": "87555f5c.75aab",
+        "group": "c8673714.ba0248",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Current Value:",
+        "format": "{{msg.payload}} bpm",
+        "layout": "row-left",
+        "x": 1120,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "bc807acc.c91fa8",
+        "type": "ui_template",
+        "z": "87555f5c.75aab",
+        "group": "3f08adad.913ada",
+        "name": "Classfications",
+        "order": 0,
+        "width": "7",
+        "height": "6",
+        "format": "<div>\n    <p style=\"font-size: large; font-weight: bold; color: white;\">Skin temperature classification</p>\n\n    <table style=\"width:100%\">\n      <tr>\n        <td>Rigid muscles, Lethal condition:</td>\n        <td>15 - 19°C</td>\n      </tr>\n      <tr>\n        <td>Possibly coma, Poor reflexes:</td>\n        <td>19 - 27°C</td>\n      </tr>\n      <tr>\n        <td>Stuport, Dozy, Unable to walk:</td>\n        <td>27 - 30°C</td>\n      </tr>\n      <tr>\n        <td>Shivering:</td>\n        <td>30 - 32</td>\n      </tr>\n      <tr>\n        <td>Healthy conditon:</td>\n        <td>32 - 34°C</td>\n      </tr>\n      <tr>\n        <td>Fevery:</td>\n        <td>34 - 36°C</td>\n      </tr>\n      <tr>\n        <td>Lethal condition:</td>\n        <td>36 - 43°C</td>\n      </tr>\n    </table>\n</div>\n<div>\n    <p style=\"font-size: large; font-weight: bold; color: white;\">Heartrate classification</p>\n    \n    <table style=\"width:100%\">\n      <tr>\n        <td>Hypothermic:</td>\n        <td>20 - 40 bpm</td>\n      </tr>\n      <tr>\n        <td>Low repulse:</td>\n        <td>40 - 60 bpm</td>\n      </tr>\n      <tr>\n        <td>Healthy condition:</td>\n        <td>60 - 100 bpm</td>\n      </tr>\n      <tr>\n        <td>Anxiety, Fear, Fever:</td>\n        <td>100 - 150 bpm</td>\n      </tr>\n      <tr>\n        <td>Heavy heart racing:</td>\n        <td>150 - 200 bpm</td>\n      </tr>\n      <tr>\n        <td>Lethal condition:</td>\n        <td>200 - 300 bpm</td>\n      </tr>\n    </table>\n</div>\n<div>\n    <p style=\"font-size: large; font-weight: bold; color: white;\">Respiration rate classification</p>\n    \n    <table style=\"width:100%\">\n      <tr>\n        <td>Non-existent:</td>\n        <td>0 breaths/min</td>\n      </tr>\n      <tr>\n        <td>Abnormally slow:</td>\n        <td>5 - 10 breaths/min</td>\n      </tr>\n      <tr>\n        <td>Healthy condition:</td>\n        <td>12 - 18 breaths/min</td>\n      </tr>\n      <tr>\n        <td>Abnormally fast:</td>\n        <td>20 - 30 breaths/min</td>\n      </tr>\n    </table>\n</div>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "templateScope": "local",
+        "x": 780,
+        "y": 60,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a4df6351.b24f18",
+        "type": "ui_text",
+        "z": "f62e9f27.ad0498",
+        "group": "79ab2a37.99866c",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Number of passengers:",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 830,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "3af4bb4.d852344",
+        "type": "ui_slider",
+        "z": "f62e9f27.ad0498",
+        "name": "Number of seats taken",
+        "label": "",
+        "group": "79ab2a37.99866c",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "topic": "",
+        "min": 0,
+        "max": "8",
+        "step": 1,
+        "x": 510,
+        "y": 100,
+        "wires": [
+            [
+                "a4df6351.b24f18"
+            ]
+        ]
+    },
+    {
+        "id": "ab2a6048.cfebd8",
+        "type": "inject",
+        "z": "f62e9f27.ad0498",
+        "name": "Default value",
+        "topic": "",
+        "payload": "3",
+        "payloadType": "num",
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "x": 200,
+        "y": 100,
+        "wires": [
+            [
+                "3af4bb4.d852344"
+            ]
+        ]
+    },
+    {
+        "id": "e46d3c0b.0a746",
+        "type": "inject",
+        "z": "87555f5c.75aab",
+        "name": "Default value",
+        "topic": "",
+        "payload": "skintemp=0",
+        "payloadType": "str",
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "x": 140,
+        "y": 160,
+        "wires": [
+            [
+                "f2f3ba77.34c6"
+            ]
+        ]
+    },
+    {
+        "id": "550e2f6a.d95ab",
+        "type": "inject",
+        "z": "87555f5c.75aab",
+        "name": "Default value",
+        "topic": "",
+        "payload": "hr=0",
+        "payloadType": "str",
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "x": 140,
+        "y": 220,
+        "wires": [
+            [
+                "30cd9705.cb6ad8"
+            ]
+        ]
+    },
+    {
+        "id": "8c9f175b.20c43",
+        "type": "inject",
+        "z": "87555f5c.75aab",
+        "name": "Default value",
+        "topic": "",
+        "payload": "respiration=0",
+        "payloadType": "str",
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "x": 140,
+        "y": 280,
+        "wires": [
+            [
+                "9b7d337c.d0f258"
+            ]
+        ]
+    },
+    {
+        "id": "60d78566.16b514",
+        "type": "function",
+        "z": "f62e9f27.ad0498",
+        "name": "RNG",
+        "func": "switch(global.get(\"speed\")) {\n    case 'Intercity':\n        msg.payload = Math.floor(Math.random() * (50 - 30) + 30);\n        break;\n    case 'Countryside':\n        msg.payload = Math.floor(Math.random() * (100 - 80) + 80);\n        break;\n    case 'Freeway':\n        msg.payload = Math.floor(Math.random() * (220 - 80) + 80);\n        break;\n    default:\n        msg.payload = Math.floor(Math.random() * (100 - 80) + 80);\n}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 910,
+        "y": 320,
+        "wires": [
+            [
+                "4872693d.0ba4a8"
+            ]
+        ]
+    },
+    {
+        "id": "4872693d.0ba4a8",
+        "type": "ui_gauge",
+        "z": "f62e9f27.ad0498",
+        "name": "Speed Monitor",
+        "group": "df26be4d.514a58",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "",
+        "label": "km/h",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "220",
+        "colors": [
+            "#98df8a",
+            "#ffec7d",
+            "#ff927d"
+        ],
+        "seg1": "120",
+        "seg2": "160",
+        "x": 1120,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "f81d7739.e2cc38",
+        "type": "ui_text",
+        "z": "f62e9f27.ad0498",
+        "group": "79ab2a37.99866c",
+        "order": 9,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Airbags deployed:",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 810,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "230ec735.94834",
+        "type": "ui_slider",
+        "z": "f62e9f27.ad0498",
+        "name": "Number of airbags deployed",
+        "label": "",
+        "group": "79ab2a37.99866c",
+        "order": 8,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "topic": "",
+        "min": 0,
+        "max": "6",
+        "step": 1,
+        "x": 520,
+        "y": 260,
+        "wires": [
+            [
+                "f81d7739.e2cc38"
+            ]
+        ]
+    },
+    {
+        "id": "8812ec30.1f4c88",
+        "type": "inject",
+        "z": "f62e9f27.ad0498",
+        "name": "Default value",
+        "topic": "",
+        "payload": "0",
+        "payloadType": "num",
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "x": 200,
+        "y": 260,
+        "wires": [
+            [
+                "230ec735.94834"
+            ]
+        ]
+    },
+    {
+        "id": "dc872f32.f4874",
+        "type": "ui_switch",
+        "z": "f62e9f27.ad0498",
+        "name": "",
+        "label": "Rollover detection",
+        "group": "4f42cd73.d6c3ec",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "",
+        "style": "",
+        "onvalue": "120",
+        "onvalueType": "num",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "0",
+        "offvalueType": "num",
+        "officon": "",
+        "offcolor": "",
+        "x": 490,
+        "y": 460,
+        "wires": [
+            [
+                "91871960.84a218"
+            ]
+        ]
+    },
+    {
+        "id": "67bc291b.531238",
+        "type": "ui_gauge",
+        "z": "f62e9f27.ad0498",
+        "name": "Rotation rate Monitor",
+        "group": "4f42cd73.d6c3ec",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "gtype": "compass",
+        "title": "",
+        "label": "°",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "360",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "x": 1140,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "82c2b02e.57d5e",
+        "type": "ui_text",
+        "z": "f62e9f27.ad0498",
+        "group": "4f42cd73.d6c3ec",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "name": "Rotation rate",
+        "label": "Rotation rate:",
+        "format": "{{msg.payload}} °",
+        "layout": "row-spread",
+        "x": 1110,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "245d0b3d.80b19c",
+        "type": "inject",
+        "z": "f62e9f27.ad0498",
+        "name": "Default value",
+        "topic": "",
+        "payload": "0",
+        "payloadType": "num",
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "x": 200,
+        "y": 460,
+        "wires": [
+            [
+                "dc872f32.f4874"
+            ]
+        ]
+    },
+    {
+        "id": "9c64347c.a7f188",
+        "type": "ui_text",
+        "z": "f62e9f27.ad0498",
+        "group": "79ab2a37.99866c",
+        "order": 6,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Seatbelts used:",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 800,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "78abb0c1.29c2b",
+        "type": "ui_slider",
+        "z": "f62e9f27.ad0498",
+        "name": "Seatbelts used",
+        "label": "",
+        "group": "79ab2a37.99866c",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "topic": "",
+        "min": 0,
+        "max": "8",
+        "step": 1,
+        "x": 480,
+        "y": 180,
+        "wires": [
+            [
+                "9c64347c.a7f188"
+            ]
+        ]
+    },
+    {
+        "id": "9a899e63.7ac7b",
+        "type": "inject",
+        "z": "f62e9f27.ad0498",
+        "name": "Default value",
+        "topic": "",
+        "payload": "3",
+        "payloadType": "num",
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "x": 200,
+        "y": 180,
+        "wires": [
+            [
+                "78abb0c1.29c2b"
+            ]
+        ]
+    },
+    {
+        "id": "2a66e457.c0d1f4",
+        "type": "ui_template",
+        "z": "f62e9f27.ad0498",
+        "group": "79ab2a37.99866c",
+        "name": "Pressure Sensor",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "format": "<p style=\"font-size: large; font-weight: bold; color: white;\">Pressure Sensor</p>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "templateScope": "local",
+        "x": 190,
+        "y": 60,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "536c935d.7e92ac",
+        "type": "ui_template",
+        "z": "f62e9f27.ad0498",
+        "group": "79ab2a37.99866c",
+        "name": "Seatbelt Detector",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "format": "<p style=\"font-size: large; font-weight: bold; color: white;\">Seatbelt Detector</p>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "templateScope": "local",
+        "x": 190,
+        "y": 140,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "e253b4a8.4f1428",
+        "type": "ui_template",
+        "z": "f62e9f27.ad0498",
+        "group": "79ab2a37.99866c",
+        "name": "Airbag Deployment Sensor",
+        "order": 7,
+        "width": 0,
+        "height": 0,
+        "format": "<p style=\"font-size: large; font-weight: bold; color: white;\">Airbag Deployment Sensor</p>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "templateScope": "local",
+        "x": 220,
+        "y": 220,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "ec066d51.085098",
+        "type": "ui_button",
+        "z": "f62e9f27.ad0498",
+        "name": "",
+        "group": "df26be4d.514a58",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Intercity",
+        "color": "",
+        "bgcolor": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "Intercity",
+        "x": 460,
+        "y": 320,
+        "wires": [
+            [
+                "28e4ab16.551604"
+            ]
+        ]
+    },
+    {
+        "id": "212d569c.40d93a",
+        "type": "ui_button",
+        "z": "f62e9f27.ad0498",
+        "name": "",
+        "group": "df26be4d.514a58",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Countryside",
+        "color": "",
+        "bgcolor": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "Countryside",
+        "x": 470,
+        "y": 360,
+        "wires": [
+            [
+                "28e4ab16.551604"
+            ]
+        ]
+    },
+    {
+        "id": "37f133f5.516804",
+        "type": "ui_button",
+        "z": "f62e9f27.ad0498",
+        "name": "",
+        "group": "df26be4d.514a58",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Freeway",
+        "color": "",
+        "bgcolor": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "Freeway",
+        "x": 460,
+        "y": 400,
+        "wires": [
+            [
+                "28e4ab16.551604"
+            ]
+        ]
+    },
+    {
+        "id": "82d18799.d817",
+        "type": "inject",
+        "z": "f62e9f27.ad0498",
+        "name": "clock",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "repeat": "2",
+        "crontab": "",
+        "once": false,
+        "x": 770,
+        "y": 320,
+        "wires": [
+            [
+                "60d78566.16b514"
+            ]
+        ]
+    },
+    {
+        "id": "28e4ab16.551604",
+        "type": "function",
+        "z": "f62e9f27.ad0498",
+        "name": "type",
+        "func": "global.set(\"speed\", msg.topic);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 770,
+        "y": 360,
+        "wires": [
+            [
+                "60d78566.16b514",
+                "80587bee.decc5"
+            ]
+        ]
+    },
+    {
+        "id": "eaad628b.021d4",
+        "type": "inject",
+        "z": "f62e9f27.ad0498",
+        "name": "Default value",
+        "topic": "Countryside",
+        "payload": "true",
+        "payloadType": "bool",
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "x": 200,
+        "y": 320,
+        "wires": [
+            [
+                "ec066d51.085098",
+                "212d569c.40d93a",
+                "37f133f5.516804"
+            ]
+        ]
+    },
+    {
+        "id": "80587bee.decc5",
+        "type": "ui_text",
+        "z": "f62e9f27.ad0498",
+        "group": "df26be4d.514a58",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "name": "Placement",
+        "label": "Placement:",
+        "format": "{{msg.topic}}",
+        "layout": "row-spread",
+        "x": 1110,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "91871960.84a218",
+        "type": "ui_slider",
+        "z": "f62e9f27.ad0498",
+        "name": "Rotation rate value",
+        "label": "",
+        "group": "4f42cd73.d6c3ec",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "topic": "",
+        "min": 0,
+        "max": "360",
+        "step": "10",
+        "x": 810,
+        "y": 460,
+        "wires": [
+            [
+                "67bc291b.531238",
+                "82c2b02e.57d5e"
+            ]
+        ]
+    },
+    {
+        "id": "a573f82e.54d97",
+        "type": "ui_text",
+        "z": "f62e9f27.ad0498",
+        "group": "3db9a2d2.2a03e6",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "name": "Distance",
+        "label": "Distance:",
+        "format": "{{msg.payload}}m",
+        "layout": "row-spread",
+        "x": 1100,
+        "y": 540,
+        "wires": []
+    },
+    {
+        "id": "718e3bb4.6ecc34",
+        "type": "ui_chart",
+        "z": "f62e9f27.ad0498",
+        "name": "Distance Monitor",
+        "group": "3db9a2d2.2a03e6",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "label": "",
+        "chartType": "horizontalBar",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "-100",
+        "ymax": "0",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "colors": [
+            "#dfa88a",
+            "#666666",
+            "#666666",
+            "#666666",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "x": 1130,
+        "y": 580,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "36b7822a.5e6c66",
+        "type": "function",
+        "z": "f62e9f27.ad0498",
+        "name": "RNG",
+        "func": "switch(global.get(\"proximity\")) {\n    case 'Faraway':\n        msg.payload = Math.floor(Math.random() * (100 - 60) + 60) * -1;\n        break;\n    case 'Normal':\n        msg.payload = Math.floor(Math.random() * (60 - 40) + 40) * -1;\n        break;\n    case 'Impact':\n        msg.payload = 0;\n        break;\n    default:\n        msg.payload = Math.floor(Math.random() * (60 - 40) + 40) * -1;\n}\n\nmsg.topic = \"m\";\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 910,
+        "y": 540,
+        "wires": [
+            [
+                "718e3bb4.6ecc34",
+                "a573f82e.54d97"
+            ]
+        ]
+    },
+    {
+        "id": "4bde2b93.4d4774",
+        "type": "ui_button",
+        "z": "f62e9f27.ad0498",
+        "name": "",
+        "group": "3db9a2d2.2a03e6",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Faraway",
+        "color": "",
+        "bgcolor": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "Faraway",
+        "x": 460,
+        "y": 540,
+        "wires": [
+            [
+                "6b9400a0.a4637"
+            ]
+        ]
+    },
+    {
+        "id": "eb06254a.96849",
+        "type": "ui_button",
+        "z": "f62e9f27.ad0498",
+        "name": "",
+        "group": "3db9a2d2.2a03e6",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Normal",
+        "color": "",
+        "bgcolor": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "Normal",
+        "x": 460,
+        "y": 580,
+        "wires": [
+            [
+                "6b9400a0.a4637"
+            ]
+        ]
+    },
+    {
+        "id": "72ae002.c1411",
+        "type": "ui_button",
+        "z": "f62e9f27.ad0498",
+        "name": "",
+        "group": "3db9a2d2.2a03e6",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Impact",
+        "color": "",
+        "bgcolor": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "Impact",
+        "x": 450,
+        "y": 620,
+        "wires": [
+            [
+                "6b9400a0.a4637"
+            ]
+        ]
+    },
+    {
+        "id": "713fc8be.8a15d8",
+        "type": "inject",
+        "z": "f62e9f27.ad0498",
+        "name": "clock",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "repeat": "2",
+        "crontab": "",
+        "once": false,
+        "x": 770,
+        "y": 540,
+        "wires": [
+            [
+                "36b7822a.5e6c66"
+            ]
+        ]
+    },
+    {
+        "id": "6b9400a0.a4637",
+        "type": "function",
+        "z": "f62e9f27.ad0498",
+        "name": "type",
+        "func": "global.set(\"proximity\", msg.topic);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 770,
+        "y": 580,
+        "wires": [
+            [
+                "36b7822a.5e6c66"
+            ]
+        ]
+    },
+    {
+        "id": "40caaefe.fd84d",
+        "type": "inject",
+        "z": "f62e9f27.ad0498",
+        "name": "Default value",
+        "topic": "Normal",
+        "payload": "true",
+        "payloadType": "bool",
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "x": 200,
+        "y": 540,
+        "wires": [
+            [
+                "4bde2b93.4d4774",
+                "eb06254a.96849",
+                "72ae002.c1411"
+            ]
+        ]
+    }
+]
