@@ -1,5 +1,5 @@
 # Node-RED-Playground
-First experiences with Node-RED
+First experiences with Node-RED: Simulating vital signs and vehicular data.
 
 <img src="https://raw.githubusercontent.com/agribu/Node-RED-Playground/master/Pictures/Selection_009.png" width="600" />
 <img src="https://raw.githubusercontent.com/agribu/Node-RED-Playground/master/Pictures/Selection_010.png" width="600" />
